@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap" rel="stylesheet">
+      
+  <title>Frontend Mentor | Recipe page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body{
+    
+      background-color: peachpuff;
+      background-color: hsl(30, 54%, 90%);;
+      margin-left: 10px; /* Remove default body margin */
+      display: flex;
+      justify-content: center; /* Center the container horizontally */
+      align-items: center; /* Center the container vertically */
+      min-height: 100vh;
+    
+    }
+
+    body, .container, .Recipe-img {
+      margin: 0px;  /* Remove margin from the image */
+      padding: 0px;  /* Remove padding from the image */
+    
+    }
+
+   
+      .container{
+        width: 800px;
+        height: 1500px;
+        display: flex;
+        flex-direction: column;
+        background-color:white;
+        border-radius: 10px;
+        margin: 10px;
+        justify-content: center;
+
+      }
+      .Recipe-Description{
+        margin-left: 25px;
+        font-family: "Outfit", sans-serif;
+      }
+      .Recipe-Description >h1{
+        font-family: "Young Serif", serif;
+      }
+
+      .Recipe-img>img{
+        width: 95%;
+        /* Ensure the image spans the entire width of the container */
+        display: block; /* Make the image a block element */
+        margin-left: 25px;
+        justify-content: center;
+        border-radius: 15px;
+      
+      }
+     
+    .Recipe-PrepTime > ul >li >p ,.Instructions{
+      display: inline;
+      color:  brown;
+      color: hsl(24, 5%, 18%);
+      font-weight: bold;
+      
+      
+    }
+    .Recipe-PrepTime > h2{
+      margin-left: 10px;
+      margin-bottom: 0px;
+      font-family: "Young Serif", serif;
+      color: hsl(332, 51%, 32%);
+     
+    
+    }
+    
+    .Recipe-PrepTime{
+      opacity:98%;
+      background-color: rgb(255, 247, 252);
+      padding-top: 3px; ;
+      border-radius: 10px;
+      padding-bottom: 10px;
+      margin-left: 25px;
+      width: 650px;
+      font-family: "Outfit", sans-serif;
+      
+    }
+    .Recipe-Ingredients> h2 , .Recipe-Instructions>h2, .Recipe-NutritionLvl>h2, .cal{
+
+      font-family: "Young Serif", serif;
+      color:  hsl(14, 45%, 36%) ;
+      font-weight: bold;
+    }
+    .Recipe-Ingredients, .Recipe-Instructions,.Recipe-NutritionLvl{
+      font-size: 15px;
+      margin-left: 25px;
+      width: 650px;
+      font-family: "Outfit", sans-serif;
+    }
+
+    .Nutrition-Tbl{
+      width: 100%;
+      border:  none;
+     justify-content: center;
+
+    }
+
+    
+  
+    td {
+     border: none ; /* Add underline border to table cells */
+      padding: 8px; /* Add padding for better readability */
+      text-align: left; /* Align text to the left */
+      border-bottom: 1px solid hsl(30, 18%, 87%)
+
+    }
+
+      
+ 
+    
+  </style>
+
+</head>
+<body>
+
+  <div class="container">
+    <div  class="Recipe-img">
+      <img src=".\assets\images\image-omelette.jpeg" width=" 650"/>  
+    </div>
+   
+    <div class="Recipe-Description">  
+      <h1> Simple Omelette Recipe</h1>
+      <p> An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked 
+        to perfection, optionally filled with your choice of cheese, vegetables, or meats.
+      </p>
+
+    </div>
+
+    <div class="Recipe-PrepTime">
+      <h2> Preparation time</h2>
+      <ul>
+        <li >  <p > Total</p>:Approximately 10 minutes </li>
+        <li >  <p >Preparation</p>:5 minutes</li>
+        <li ><p >Cooking</p> :5 minutes </li>
+      </ul>
+
+
+    
+   
+    
+    </div >
+    <br\>
+    <div  class="Recipe-Ingredients">
+      <h2 class="hey ">   Ingredients</h2>
+      <ul>
+        <li> 2-3 large eggs</li>
+        <li>Salt, to taste</li>
+        <li>Pepper, to taste   </li>
+        <li>1 tablespoon of butter or oil</li>
+        <li> Optional fillings: cheese, diced vegetables, cooked meats, herbs
+        </li>
+      </ul>
+
+ 
+    </div  >
+   <hr>
+
+    <div class="Recipe-Instructions" width=" 400px">
+      <h2 class="hey ">Instructions</h2>
+      
+      <ol>
+        <li> <p class="Instructions"> Beat the eggs</p>  : In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. 
+          You can add a tablespoon of water or milk for a fluffier texture.</li>
+
+        <li >  <p class="Instructions">Heat the pan</p> : Place a non-stick frying pan over medium heat and add butter or oil.</li>
+        <li> <p  class="Instructions">Cook the omelette</p> : Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure 
+          the eggs evenly coat the surface.
+        </li>
+        <li> <p class="Instructions">Add fillings (optional)</p> : When the eggs begin to set at the edges but are still slightly runny in the 
+          middle, sprinkle your chosen fillings over one half of the omelette.</li>
+        <li> <p class="Instructions"> Fold and serve</p> 
+         : As the omelette continues to cook, carefully lift one edge and fold it over the 
+          fillings. Let it cook for another minute, then slide it onto a plate.</li>
+        <li> <p class="Instructions"> Enjoy</p> : Serve hot, with additional salt and pepper if needed.</li>
+      </ol>
+
+    </div>
+
+    <hr>
+
+    <div  class="Recipe-NutritionLvl">
+
+      <h2>Nutrition</h2>  
+    <p> The table below shows nutritional values per serving without the additional fillings.</p>
+
+    <table class="Nutrition-Tbl" align="center" border="1">
+      <tr>
+        <td>Calories</td>
+        <td class="cal">277kcal</td>
+      </tr>
+      <tr>
+        <td>Carbs</td>
+        <td  class="cal">0g</td>
+      </tr>
+
+      <tr>
+        <td>Protein</td>
+        <td  class="cal">20g</td>
+      </tr>
+      <tr>
+        <td>FAT </td>
+        <td  class="cal">22g</td>
+      </tr>
+
+    </table>
+    </div>
+
+  
+  </br>
+
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">@Zipho.dev </a>
+    </div>
+  </div>
+
+ 
+ 
+
+
+  
+ 
+</body>
+</html>
